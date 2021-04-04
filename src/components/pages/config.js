@@ -1,4 +1,3 @@
-import "../../App.css"
 import React from "react"
 import ConfigForm from '../molecule/configForm'
 import BackChevron from '../atom/backChevron'

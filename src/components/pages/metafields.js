@@ -1,4 +1,3 @@
-import "../../App.css"
 import React from "react"
 import BackChevron from "../atom/backChevron";
 

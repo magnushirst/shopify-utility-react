@@ -1,4 +1,3 @@
-const appConfig = require('../src/util/appConfig');
 const electron = require("electron");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
@@ -7,14 +6,6 @@ const isDev = require("electron-is-dev");
 let mainWindow;
 
 function createWindow() {
-
-    appConfig.set({
-        'config.url': 'url',
-        'config.apiKey': 'key',
-        'config.apiSecret': 'secret',
-    });
-   getConfig();
-
     mainWindow = new BrowserWindow({
         width: 1200,
         height: 800,
@@ -45,8 +36,3 @@ app.on("activate", () => {
         createWindow();
     }
 });
-
-const getConfig = exports.getConfig = () => {
-    console.info(appConfig.get('config'));
-    return appConfig.get('config')
-};
