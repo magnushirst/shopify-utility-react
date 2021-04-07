@@ -1,12 +1,13 @@
-import React from "react"
+import React from 'react';
 import ConfigForm from '../molecule/configForm'
 import BackChevron from '../atom/backChevron'
-
 class Config extends React.Component {
 
-    // constructor(props) {
-    //     super(props);
-    // }
+    constructor(props) {
+        super(props);
+        this.state = {config: window.config.get()};
+        this.saveConfig = (data) => {window.config.save(data)}
+    }
 
     render() {
         return (
@@ -17,7 +18,7 @@ class Config extends React.Component {
                 </div>
 
                 <div className="content">
-                    <ConfigForm/>
+                    <ConfigForm config={this.state.config} saveConfig={this.saveConfig}/>
                 </div>
             </div>
         )

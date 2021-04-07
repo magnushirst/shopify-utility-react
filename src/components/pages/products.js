@@ -1,7 +1,6 @@
 import React from "react"
 import BackChevron from "../atom/backChevron";
 
-
 class Products extends React.Component {
     render() {
         return (
@@ -10,7 +9,6 @@ class Products extends React.Component {
                     <BackChevron to="/"/>
                     <h1>Products</h1>
                 </div>
-
             </div>
         )
     }

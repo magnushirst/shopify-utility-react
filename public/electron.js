@@ -1,8 +1,14 @@
-const electron = require("electron");
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const Store = require('electron-store');
+const {
+    BrowserWindow,
+    app,
+} = require("electron");
 const path = require("path");
 const isDev = require("electron-is-dev");
+
+const store = new Store();
+store.set('app.electron', 'works');
+
 let mainWindow;
 
 function createWindow() {
@@ -11,8 +17,12 @@ function createWindow() {
         height: 800,
         icon: "",
         webPreferences: {
-            nodeIntegration: true,
-            enableRemoteModule: true,
+            nodeIntegration: false,
+            enableRemoteModule: false,
+            contextIsolation: true,
+            nodeIntegrationInWorker: false,
+            nodeIntegrationInSubFrames: false,
+            preload: __dirname + '\\preload.js',
         }
     });
 
@@ -25,6 +35,7 @@ function createWindow() {
 }
 
 app.on("ready", createWindow);
+
 app.on("window-all-closed", () => {
     if (process.platform !== "darwin") {
         app.quit();

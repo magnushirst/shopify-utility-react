@@ -9,7 +9,6 @@ class Metafields extends React.Component {
                     <BackChevron to="/"/>
                     <h1>Metafields</h1>
                 </div>
-
             </div>
         )
     }

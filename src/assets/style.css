@@ -87,3 +87,11 @@ code {
 .App {
   text-align: center;
 }
+
+.button-icon {
+  margin-right: 8px;
+}
+
+.back-icon:hover {
+  transform: scale(1.25);
+}

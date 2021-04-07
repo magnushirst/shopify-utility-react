@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const BackChevron = ({to}) => {
     return (
-        <Link class="back" to={to}>
+        <Link className="back-icon" to={to}>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white"
                  className="bi bi-chevron-left" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
