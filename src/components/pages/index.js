@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 class Index extends React.Component {
     render() {
         return (
-            <div className="App">
+            <div className="u-t-center">
                 <h1>Shopify Utility App</h1>
                 <div className="menu-wrapper">
                     <Link to="/config">

@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { HashRouter as Router } from 'react-router-dom'
 import Index from './index';
+import React from "react";
 
 test('renders correct header', () => {
   render(

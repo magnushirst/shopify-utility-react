@@ -1,3 +1,7 @@
+$tiny-spacer: 4px;
+$small-spacer: 8px;
+$medium-spacer: 16px;
+
 body {
   position: relative;
   color: white;
@@ -14,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 16px;
+  padding: $medium-spacer;
 }
 
 .heading {
@@ -30,7 +34,7 @@ body {
 
 button {
   background-color: white;
-  padding: 10px 20px;
+  padding: $small-spacer $medium-spacer;
   border-radius: 10px;
   border: none;
   appearance: none;
@@ -39,10 +43,10 @@ button {
   0px 18px 88px -4px rgba(24, 39, 75, 0.14);
   transition: transform ease-in 0.1s;
   cursor: pointer;
-}
 
-button:hover {
-  transform: scale(1.05);
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .menu-wrapper button {
@@ -57,17 +61,12 @@ a {
   text-decoration: none;
   height: fit-content;
   width: fit-content;
-  margin: 10px;
-}
+  margin: $small-spacer;
 
-a:hover {
-  opacity: 1;
-  text-decoration: none;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
 }
 
 .config-form label{
@@ -75,46 +74,46 @@ code {
 }
 
 .input-wrapper {
-  margin-bottom: 8px;
-}
+  margin-bottom: $small-spacer;
 
-.input-wrapper input {
-  border-radius: 4px;
-  width: 300px;
-  height: 24px;
-}
-
-.App {
-  text-align: center;
+  input {
+    border-radius: 4px;
+    width: 300px;
+    height: 24px;
+  }
 }
 
 .button-icon {
-  margin-right: 8px;
-}
+  margin-right: $small-spacer;
 
-.back-icon:hover {
-  transform: scale(1.25);
-}
-
-.dataTable td, .dataTable th{
-  border: solid black 2px;
-  padding: 0.5rem;
-  max-width: 300px;
-  overflow: auto;
+  &:hover {
+    transform: scale(1.25);
+  }
 }
 
 .dataTable {
   border-collapse: collapse;
+
+  td, th {
+    border: solid black 2px;
+    padding: $small-spacer;
+    max-width: 300px;
+    overflow: auto;
+  }
 }
 
 .u-mt-medium {
-  margin-top: 16px;
+  margin-top: $medium-spacer;
 }
 
 .u-mb-medium {
-  margin-bottom: 16px;
+  margin-bottom: $medium-spacer;
+}
+
+.u-t-center {
+  text-align: center;
 }
 
 .thin-btn{
-  padding: .3em 1em
+  padding: $tiny-spacer $small-spacer
 }
