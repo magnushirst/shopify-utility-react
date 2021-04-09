@@ -5,10 +5,10 @@ import TableRow from "../atom/tableRow";
 import DataTable from "../molecule/dataTable";
 import {GET_METAFIELDS} from "../../api/getMetafields";
 import {useQuery} from "@apollo/client";
+import {ShopifyGraphClient} from "../../api/shopifyGraphqlClient";
 
 const Metafields = () =>{
-
-    const { loading, error, data } = useQuery(GET_METAFIELDS);
+    const { loading, error, data } = useQuery(GET_METAFIELDS, {client: ShopifyGraphClient});
     return (
         <div className="about">
             <div className="heading">
