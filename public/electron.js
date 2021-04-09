@@ -1,11 +1,11 @@
 const Store = require('electron-store');
 const {
     BrowserWindow,
+    webContents,
     app,
 } = require("electron");
 const path = require("path");
 const isDev = require("electron-is-dev");
-
 const store = new Store();
 store.set('app.electron', 'works');
 
@@ -17,6 +17,7 @@ function createWindow() {
         height: 800,
         icon: "",
         webPreferences: {
+            webSecurity: false, // required to call shopify graphql
             nodeIntegration: false,
             enableRemoteModule: false,
             contextIsolation: true,
@@ -25,7 +26,7 @@ function createWindow() {
             preload: __dirname + '\\preload.js',
         }
     });
-
+    resetBrowserState();
     mainWindow.loadURL(
         isDev
             ? "http://localhost:3000"
@@ -47,3 +48,10 @@ app.on("activate", () => {
         createWindow();
     }
 });
+
+function resetBrowserState() {
+    webContents.getAllWebContents().forEach(contents => {
+        contents.session.clearCache();
+        contents.session.clearStorageData();
+    })
+};

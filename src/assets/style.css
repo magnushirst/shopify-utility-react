@@ -95,3 +95,14 @@ code {
 .back-icon:hover {
   transform: scale(1.25);
 }
+
+.dataTable td, .dataTable th{
+  border: solid black 2px;
+  padding: 0.5rem;
+  max-width: 300px;
+  overflow: auto;
+}
+
+.dataTable {
+  border-collapse: collapse;
+}
