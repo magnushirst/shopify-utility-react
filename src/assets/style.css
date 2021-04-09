@@ -106,3 +106,15 @@ code {
 .dataTable {
   border-collapse: collapse;
 }
+
+.u-mt-medium {
+  margin-top: 16px;
+}
+
+.u-mb-medium {
+  margin-bottom: 16px;
+}
+
+.thin-btn{
+  padding: .3em 1em
+}
