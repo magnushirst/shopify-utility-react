@@ -12,7 +12,7 @@ class Config extends React.Component {
   render() {
     const { config } = this.state;
     return (
-      <div className="about">
+      <div className="config">
         <div className="heading">
           <BackChevron to="/" />
           <h1>App Config</h1>
