@@ -1,6 +1,7 @@
 import React from 'react';
 import ConfigForm from '../molecule/configForm';
-import BackChevron from '../atom/backChevron';
+import BackChevronLink from '../atom/backChevronLink';
+import DataSyncForm from '../molecule/dataSyncForm';
 
 class Config extends React.Component {
   constructor(props) {
@@ -14,12 +15,13 @@ class Config extends React.Component {
     return (
       <div className="config">
         <div className="heading">
-          <BackChevron to="/" />
+          <BackChevronLink to="/" />
           <h1>App Config</h1>
         </div>
 
         <div className="content">
           <ConfigForm config={config} saveConfig={this.saveConfig} />
+          <DataSyncForm config={config} saveConfig={this.saveConfig} />
         </div>
       </div>
     );

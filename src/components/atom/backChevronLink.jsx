@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const BackChevron = ({ to }) => (
+const BackChevronLink = ({ to }) => (
   <Link className="back-icon" to={to}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,12 +20,12 @@ const BackChevron = ({ to }) => (
   </Link>
 );
 
-BackChevron.propTypes = {
+BackChevronLink.propTypes = {
   to: PropTypes.string,
 };
 
-BackChevron.defaultProps = {
+BackChevronLink.defaultProps = {
   to: '',
 };
 
-export default BackChevron;
+export default BackChevronLink;

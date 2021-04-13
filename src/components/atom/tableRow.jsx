@@ -12,7 +12,7 @@ const TableRow = ({ fields }) => (
 );
 
 TableRow.propTypes = {
-  fields: PropTypes.arrayOf(PropTypes.string),
+  fields: PropTypes.arrayOf(PropTypes.any),
 };
 
 TableRow.defaultProps = {

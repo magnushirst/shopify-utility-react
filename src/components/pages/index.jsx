@@ -8,21 +8,21 @@ class Index extends React.PureComponent {
         <h1>Shopify Utility App</h1>
         <div className="menu-wrapper">
           <Link to="/config">
-            <button type="button">
+            <button type="button" className="btn-chunky">
               <span role="img" className="button-icon">⚙</span>
               Config
             </button>
           </Link>
           <Link to="/metafields">
-            <button type="button">
+            <button type="button" className="btn-chunky">
               <span role="img" className="button-icon">🗄️</span>
-              Metafields
+              Store Metafields
             </button>
           </Link>
           <Link to="/products">
-            <button type="button">
+            <button type="button" className="btn-chunky">
               <span role="img" className="button-icon">🛍️</span>
-              Products
+              View Products
             </button>
           </Link>
         </div>
