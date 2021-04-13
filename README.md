@@ -46,6 +46,7 @@ To use this application we need to get credentials to talk to the shopify store 
     - Product Read
 6) Save the app
 7) Copy over the `API key` and `Password` to the shopify config page
+8) A restart can be required when changing your credentials
 
 ## Future Features
 - Adding and modifying store metafields
@@ -55,4 +56,9 @@ To use this application we need to get credentials to talk to the shopify store 
 - Better error handling for API calls
 
 ## Running from source code
-WIP
+This project was built using [the electron react boilerplate project](https://github.com/electron-react-boilerplate/electron-react-boilerplate)
+```shell script
+npm install # Get dependencies
+npm run  start # Run web server and application
+npm run build # Create artifacts
+```

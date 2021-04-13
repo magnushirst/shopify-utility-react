@@ -1,4 +1,5 @@
 const Store = require('electron-store');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { contextBridge } = require('electron');
 
 const store = new Store();
