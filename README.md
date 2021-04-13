@@ -26,6 +26,7 @@ Shows a list of store metafields with pagination controls to view more records.
 
 ### Products
 Shows a list of all store products. They can be filtered by Vendor or Product Type. Products can also be viewed in more detail by clicking the magnifying glass.
+
 <img src="docs/images/products-page.PNG" width="600">
 
 ### Product Details
