@@ -18,10 +18,12 @@ touch.
 ### Config Page
 On the config page, you can put the credentials of a private app you have setup and also sync/scrape your store of all it's products and store metafields. The purpose of this
 is to allow the drop down filters in the next pages to be autopopulated with all the options available. For the products, the current filters are **Vendor** and **Product Type**. For metafields, it's the **namespace**.
+
 <img src="docs/images/config-page.PNG" width="600">
 
 ### Store Metafields
 Shows a list of store metafields with pagination controls to view more records.
+
 <img src="docs/images/metafield-page.PNG" width="600">
 
 ### Products
@@ -31,6 +33,7 @@ Shows a list of all store products. They can be filtered by Vendor or Product Ty
 
 ### Product Details
 Shows the majority of fields available for a product via the API. This is a nice tool for building custom product pages
+
 <img src="docs/images/product-details-page.PNG" width="600">
 
 ## Setting up a Private App
